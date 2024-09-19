@@ -24,9 +24,10 @@
     margin: 5px 0;
   }
 
-  .slider_section .carousel-indicators {
+  .slider_section .carousel-indicators{
     margin-top: 45px;
   }
+  
 }
 
 @media (max-width: 767px) {
@@ -38,6 +39,7 @@
   .about_section .row {
     flex-direction: column-reverse;
   }
+
 }
 
 @media (max-width: 576px) {
@@ -51,6 +53,10 @@
   .dropdown-menu-wrapper {
     right: 3%;
   }
+  .slider_section{
+    margin-top: 100px;
+  }
+  
 }
 
 @media (max-width: 376px) {
