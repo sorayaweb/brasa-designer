@@ -132,3 +132,27 @@ function getYear() {
         header.classList.remove("scrolled");
       }
     });
+
+     // Seleciona o botão dropdown e o conteúdo
+  const dropdownBtn = document.querySelector('.dropdown-btn');
+  const dropdownContent = document.querySelector('.dropdown-content');
+  const dropdownItems = document.querySelectorAll('.filters_menu li');
+
+  // Abre ou fecha o dropdown quando o botão for clicado
+  dropdownBtn.addEventListener('click', function () {
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Fecha o dropdown quando um item for clicado
+  dropdownItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      dropdownContent.style.display = 'none';
+    });
+  });
+
+  // Fecha o dropdown se clicar fora dele
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown-menu-wrapper')) {
+      dropdownContent.style.display = 'none';
+    }
+  });
